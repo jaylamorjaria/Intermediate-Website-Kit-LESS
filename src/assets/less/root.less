@@ -8,57 +8,65 @@
 @media only screen and (min-width: 0rem) {
     // Website colors
     :root {
+        /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+        --background-color: #002ed2;
         --primary: #ffba19;
         --primaryLight: #ffd675;
         --secondary: #001f3f;
         --secondaryLight: #001f3f;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
+        --headerColor: #fff;
+        --bodyTextColor: #fff;
         --bodyTextColorWhite: #fafbfc;
-
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
         /* 31px - 49px */
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1rem;
-
         /* 60px - 100px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
-
-    // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    *, *:before, *:after {
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+    }
     .cs-topper {
-        display: block;
-        margin-bottom: 0.25rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
         font-size: var(--topperFontSize);
         line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: .1em;
         font-weight: 700;
         color: var(--primary);
-        text-align: inherit;
+        margin-bottom: (4/16rem);
+        display: block;
     }
-
+    
     .cs-title {
-        position: relative;
-        margin: 0 0 1rem 0;
-        max-width: 43.75rem;
         font-size: var(--headerFontSize);
-        line-height: 1.2em;
         font-weight: 900;
-        color: var(--headerColor);
+        line-height: 1.2em;
         text-align: inherit;
+        max-width: (700/16rem);
+        margin: 0 0 (16/16rem) 0;
+        color: var(--headerColor);
+        position: relative;
     }
-
+    
     .cs-text {
-        margin: 0;
-        max-width: 40.625rem;
-        width: 100%;
         font-size: var(--bodyFontSize);
         line-height: 1.5em;
-        color: var(--bodyTextColor);
         text-align: inherit;
-    }
+        width: 100%;
+        max-width: (650/16rem);
+        margin: 0;
+        color: var(--bodyTextColor);
+    }                      
 
     // Button - can be replaced using CodeStitch's "Button" Stitches
     .cs-button-solid {
@@ -127,9 +135,10 @@
         margin: 0;
         overflow-x: hidden;
         padding: 0;
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: "Oswald", Arial, sans-serif;
         font-size: 100%;
         color: var(--bodyTextColor);
+        
     }
 
     *,
@@ -142,6 +151,7 @@
 
     body {
         transition: background-color 0.3s;
+        background-color: var(--background-color);
     }
 
     .container {
@@ -190,33 +200,22 @@
     }
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
-    /* roboto-regular - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 400;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   /* oswald-regular - latin */
+   @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/oswald-v53-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* roboto-700 - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 700;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    /* roboto-900 - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 900;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+/* oswald-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/oswald-v53-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }   
 }
 
 /* Reset Margins */
@@ -1089,125 +1088,232 @@
 }
 
 /*-- -------------------------- -->
-<---    Final Call To Action    -->
+<---          Final CTA         -->
 <--- -------------------------- -*/
 
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #cta {
+    #contact-1699 {
+        padding: var(--sectionPadding);
         position: relative;
-        padding: (50/16rem) 0;
+        z-index: 1;
+        max-width: 80%;
 
-        .container {
-            text-align: center;
+        .cs-container {
+            width: 80%;
+            /* changes to 1280px at desktop */
+            max-width: (584/16rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* 48px - 128px */
+            gap: clamp(3rem, 10vw, 5rem);
         }
 
-        picture {
-            z-index: -2;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            max-width: 23ch;
+            margin: 0 0 (16/16rem) 0;
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+        }
+
+        .cs-author {
+            margin-top: (40/16rem);
+            display: flex;
+            align-items: center;
+            gap: (16/16rem);
+        }
+
+        .cs-profile {
+            width: (52/16rem);
+            height: (52/16rem);
 
             img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .cs-flex-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-signature {
+            width: auto;
+            height: (43/16rem);
+        }
+
+        .cs-form {
+            width: 100%;
+            max-width: (632/16rem);
+            /* prevents flexbox from affecting height and width */
+            box-sizing: border-box;
+            /* 32px - 48px top and bottom */
+            /* 16px - 60px left and right */
+            padding: clamp(2rem, 5.18vw, 3rem) clamp(1rem, 5vw, 3.75rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: (12/16rem);
+            position: relative;
+            /* prevents flexbox from squishing it */
+            flex: none;
+
+            .cs-title {
+                /* 24px - 48px */
+                margin: 0 0 clamp(1.5rem, 4vw, 3rem) 0;
+            }
+        }
+
+        .cs-label {
+            font-size: (16/16rem);
+            width: 100%;
+            color: var(--headerColor);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            grid-column: span 12;
+            gap: (4/16rem);
+        }
+
+        .cs-input {
+            font-size: (16/16rem);
+            width: 100%;
+            height: (56/16rem);
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            padding: 0;
+            padding-left: (24/16rem);
+            color: var(--headerColor);
+            background-color: #fff;
+            border: none;
+
+            &::placeholder {
+                color: #767676;
+                opacity: 0.6;
+            }
+        }
+
+        .cs-textarea {
+            font-family: inherit;
+            min-height: (120/16rem);
+            /* 16px - 28px */
+            margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
+            padding-top: (24/16rem);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            font-weight: 700;
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            text-align: center;
+            text-decoration: none;
+            min-width: (150/16rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            padding: 0 (24/16rem);
+            color: #fff;
+            background-color: var(--secondary);
+            border: none;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: color 0.3s;
+
+            &:before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: #000;
+                opacity: 1;
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 100%;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                color: #fff;
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-submit {
+            width: 100%;
+            min-width: (283/16rem);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &::before {
+                content: "";
                 width: 100%;
+                height: 100%;
+                background-color: #f7f7f7;
+                opacity: 0.9;
+                position: absolute;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
             }
         }
-
-        .title {
-            position: relative;
-            margin-bottom: (36/16rem);
-            font-size: ~"min(9vw, 3rem)";
-            line-height: (58/48em);
-            font-weight: 900;
-            color: #fff;
-            text-align: center;
-        }
-
-        p {
-            opacity: 1;
-            margin: auto;
-            margin-bottom: (36/16rem);
-            max-width: (598/16rem);
-            width: 96%;
-            color: #fff;
-            text-align: center;
-        }
-
-        &:before {
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            opacity: 0.7;
-            display: block;
-            background: #000;
-            height: 100%;
-            width: 100%;
-        }
     }
 }
 
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-    #cta {
-        padding: (168/16rem) 0;
-    }
-}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #contact-1699 {
+        padding: var(--sectionPadding);
 
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-    #cta {
-        position: relative;
-        margin-top: (100/16rem);
-        .container {
-            margin: auto;
-            width: 90.0625%;
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
         }
 
-        picture {
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90.0625%;
+        .cs-form {
+            width: 45vw;
+            order: -1;
+        }
 
-            &:before {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                opacity: 0.7;
-                display: block;
-                background: #000;
-                height: 100%;
-                width: 100%;
-            }
-        }
-        &:before {
-            display: none;
-        }
-        &:after {
-            z-index: -3;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            content: "";
-            opacity: 1;
-            transform: translateX(-50%);
-            display: block;
-            background: url("/assets/svgs/cta-squares.svg");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: (1108/16rem);
-            width: (2000/16rem);
+        .cs-submit {
+            width: auto;
         }
     }
 }
@@ -1215,13 +1321,32 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
+        #contact-1699 {
+            .cs-title,
+            .cs-job,
+            .cs-label, .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-background {
+                &::before {
+                    background-color: var(--medium);
+                }
+            }
+
+            .cs-input {
+                color: #fff;
+                background-color: rgba(255, 255, 255, 0.1);
+
+                &::placeholder {
+                    color: #fff;
+                    opacity: 0.8;
+                }
             }
         }
     }
 }
+                                
 
 /*-- -------------------------- -->
 <---           Footer           -->
