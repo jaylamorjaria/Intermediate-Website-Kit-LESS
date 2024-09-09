@@ -9,7 +9,8 @@ module.exports = {
         "city": "Denver",
         "state": "CO",
         "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "country": "US",
+        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",
