@@ -1,7 +1,7 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
+title: 'JD Wills and Estates'
+description: 'JD Wills and Estates'
+preloadImg: '/assets/images/Hero image v1.jpg'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -12,11 +12,22 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+<noscript>
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
+</noscript>
 
     <link rel="preload" href="./fonts/oswald-v53-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/oswald-v53-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- cookies widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+
+        <!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/angela-jdwillsandestates/30min', text: 'Free chat', color: '#ffba19', textColor: '#ffffff', branding: undefined }); }</script>
+<!-- Calendly badge widget end -->
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -153,9 +164,9 @@ eleventyNavigation:
                     </p>
                 </a>
                 <picture class="cs-item-background">
-                    <source media="(max-width: 600px)" srcset="assets/images/leap of faith.webp">
-                    <source media="(min-width: 601px)" srcset="assets/images/leap of faith.webp">
-                    <img decoding="async" src="assets/images/leap of faith.webp" alt="leap of faith" width="413" height="374" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="assets/images/leap of faith cropped.webp">
+                    <source media="(min-width: 601px)" srcset="assets/images/leap of faith cropped.webp">
+                    <img decoding="async" src="assets/images/leap of faith cropped.webp" alt="leap of faith" width="413" height="374" aria-hidden="true">
                 </picture>
             </li>
         </ul>
@@ -226,7 +237,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-flex-group">
                     <picture class="cs-picture">
-                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                        <img class="cs-profile" src="assets/images/Chris Murphy.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
                     </picture>
                     <span class="cs-name">
                     Chris Murphy
@@ -241,7 +252,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-flex-group">
                     <picture class="cs-picture">
-                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                        <img class="cs-profile" src="assets/images/Paula Youart.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
                     </picture>
                     <span class="cs-name">
                         Paula Youart
@@ -256,7 +267,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-flex-group">
                     <picture class="cs-picture">
-                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                        <img class="cs-profile" src="assets/images/Shig Hayre.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
                     </picture>
                     <span class="cs-name">
                         Shig Hayre

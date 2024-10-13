@@ -6,6 +6,7 @@
 @media only screen and (min-width: 0rem) {
   #content-1450 {
     padding: var(--sectionPadding);
+    padding-bottom: 0;
   }
   #content-1450 .cs-container {
     width: 100%;
@@ -45,6 +46,8 @@
 @media only screen and (min-width: 0rem) {
   #services-1252 {
     padding: var(--sectionPadding);
+    padding-top: 0;
+    padding-bottom: 0;
     position: relative;
     z-index: 10;
   }
@@ -86,7 +89,6 @@
     margin: 0;
     padding: 0;
     background-color: #000;
-    border-radius: 0.5rem;
     /* clips background image corners */
     overflow: hidden;
     box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
@@ -115,7 +117,6 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
     /* prevents border from affecting height and width */
     box-sizing: border-box;
-    border-radius: 0.5rem;
     /* prevents the mouse from interacting with it so when you hover hover the other elements inside the card it doesn't block your mouse from hovering over them */
     pointer-events: none;
     opacity: 1;
