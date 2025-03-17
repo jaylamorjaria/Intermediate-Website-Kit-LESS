@@ -1,5 +1,360 @@
 /* STYLES FOR ABOVE THE FOLD */
 
+.section-how-it-works-section:not(.buy-cta) {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(.buy-cta) {
+      max-width: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &:not(.buy-cta) {
+      width: auto;
+      box-sizing: initial;
+    }
+  }
+
+  .section-how-it-works-section {
+    margin-top: 5.5em;
+
+    @media screen and (min-width: 1024px) {
+      & {
+        margin-top: 6em;
+      }
+    }
+  }
+
+  .css-scan-h3-variation-1 {
+    font-weight: 400;
+    font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.9em;
+
+    @media screen and (min-width: 1024px) {
+      & {
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  .css-scan-ul-variation-2 {
+    list-style: none;
+    padding: 0;
+    margin-top: 2em;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      & {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .css-scan-li-variation-3 {
+    flex: 0 0 30%;
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
+
+    @media screen and (min-width: 1024px) {
+      &:not(:first-child) {
+        margin-top: initial;
+      }
+    }
+  }
+
+  .div-step-illustration-step-1 {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    height: 180px;
+    background-image: linear-gradient(#a0e9e5 0%, rgba(217, 217, 217, 0) 100%);
+  }
+
+  .div-browser-frame {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0 0 1px, rgba(0, 0, 0, 0.2) 0 10px 50px;
+    background-color: #fff;
+    margin-top: 40px;
+    right: 100px;
+    position: relative;
+  }
+
+  .div-browser-topbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 .5px 0, rgba(0, 0, 0, 0.05) 0 -.5px 0 inset;
+    background-color: #fff;
+  }
+
+  .div-browser-address {
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 6px 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .img-custom-cursor-unique-1 {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+  }
+
+  .p-step-title-unique-1 {
+    font-weight: 400;
+    font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    margin-bottom: 0;
+    font-size: 1.3em;
+  }
+
+  .css-scan-li-variation-4 {
+    flex: 0 0 30%;
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
+
+    @media screen and (min-width: 1024px) {
+      &:not(:first-child) {
+        margin-top: initial;
+      }
+    }
+  }
+
+  .div-step-illustration-step-2 {
+    overflow: hidden;
+    border-radius: 8px;
+    background-image: linear-gradient(#a0e9e5 0%, rgba(217, 217, 217, 0) 100%);
+    height: 180px;
+    margin-bottom: 2em;
+  }
+
+  .div-outline {
+    outline: 1px solid red;
+    display: inline-block;
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .div-edit-btn {
+    border-radius: 6px;
+    line-height: .8;
+    color: #374151;
+    padding: 11px 17px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px;
+    border-color: #d1d5db;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #fff;
+    display: inline-block;
+
+    &:hover {
+      background-color: #f9fafb;
+    }
+  }
+
+  .svg-svg-inline-fa-fa-pen-fa-w-16 {
+    overflow: visible;
+    font-size: inherit;
+    vertical-align: -.125em;
+    height: 1em;
+    display: inline-block;
+    width: 1em;
+    margin-right: 8px;
+  }
+
+  .img-custom-cursor-unique-2 {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+  }
+
+  .div-cscexample-css-unique-1 {
+    transition: all 250ms;
+    outline: 0 !important;
+    border-radius: 14px;
+    transition-behavior: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    color: #b1b1b1;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 0 8px 0, rgba(0, 0, 0, 0.24) 0 4px 8px 0;
+    will-change: transform;
+    text-align: left;
+    min-width: 250px;
+    line-height: 24px;
+    font-size: 14px;
+    margin-top: 2em;
+    height: initial;
+    max-width: 400px;
+    background-color: rgba(30, 32, 44, 0.95);
+    padding: 17px 20px;
+    z-index: 1;
+    top: -2px;
+    right: -140px;
+    position: relative;
+    text-shadow: none !important;
+    width: initial !important;
+  }
+
+  .p-cscexample-title-unique-1 {
+    outline: 0 !important;
+    line-height: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    display: inline;
+    word-break: break-all;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #4adc71;
+    text-shadow: none !important;
+    width: initial !important;
+  }
+
+  .p-cscexample-classes-wrapper {
+    list-style: none;
+    color: #4adc71;
+    padding: 0;
+    margin: 0;
+
+    &:not(:empty) {
+      font-weight: 700;
+      word-break: break-all;
+      line-height: 16px;
+      display: inline;
+    }
+  }
+
+  .p-cscexample-dimensions {
+    overflow: hidden;
+    outline: 0 !important;
+    line-height: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    color: #fff;
+    font-size: 12.6px;
+    opacity: .7;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    text-wrap-mode: nowrap;
+    white-space-collapse: collapse;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-shadow: none !important;
+    width: initial !important;
+  }
+
+  .svg-svg-inline-fa-fa-ruler-combined-fa-w-16 {
+    overflow: visible;
+    font-size: inherit;
+    vertical-align: -.125em;
+    height: 1em;
+    display: inline-block;
+    width: 1em;
+  }
+
+  .p-step-title-unique-2 {
+    font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    margin-bottom: 0;
+  }
+
+  .div-step-illustration-step-3 {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    height: 180px;
+    background-image: linear-gradient(#a0e9e5 0%, rgba(217, 217, 217, 0) 100%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .div-cscexample-css-unique-2 {
+    transition: all 250ms;
+    outline: 0 !important;
+    border-radius: 14px;
+    transition-behavior: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    color: #b1b1b1;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 0 8px 0, rgba(0, 0, 0, 0.24) 0 4px 8px 0;
+    will-change: transform;
+    text-align: left;
+    line-height: 24px;
+    font-size: 14px;
+    height: initial;
+    max-width: 400px;
+    background-color: rgba(30, 32, 44, 0.95);
+    padding: 17px 20px;
+    z-index: 1;
+    margin-top: 0;
+    text-shadow: none !important;
+    width: 195px !important;
+    min-width: 195px !important;
+  }
+
+  .p-cscexample-title-unique-2 {
+    outline: 0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 16px;
+    word-break: break-all;
+    display: inline;
+    color: #4adc71;
+    width: initial !important;
+    text-shadow: none !important;
+  }
+
+  .svg-svg-inline-fa-fa-check-fa-w-16 {
+    overflow: visible;
+    font-size: inherit;
+    vertical-align: -.125em;
+    height: 1em;
+    display: inline-block;
+    width: 1em;
+    margin-right: 8px;
+  }
+
+  .css-scan-hr-variation-5 {
+    opacity: .7;
+    border-color: #f1f1f1;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 5em;
+    margin-top: 4em;
+
+    @media screen and (min-width: 1024px) {
+      & {
+        margin-bottom: 6em;
+        margin-top: 5em;
+      }
+    }
+  }
+
+
+
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
